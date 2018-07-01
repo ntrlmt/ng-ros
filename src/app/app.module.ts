@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { RosConnectionModule } from 'ros-connection';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RosConnectionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

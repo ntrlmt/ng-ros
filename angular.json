@@ -121,6 +121,86 @@
           }
         }
       }
+    },
+    "ros-connection": {
+      "root": "projects/ros-connection",
+      "sourceRoot": "projects/ros-connection/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ros-connection/tsconfig.lib.json",
+            "project": "projects/ros-connection/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ros-connection/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ros-connection/src/test.ts",
+            "tsConfig": "projects/ros-connection/tsconfig.spec.json",
+            "karmaConfig": "projects/ros-connection/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ros-connection/tsconfig.lib.json",
+              "projects/ros-connection/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ros3d": {
+      "root": "projects/ros3d",
+      "sourceRoot": "projects/ros3d/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ros3d/tsconfig.lib.json",
+            "project": "projects/ros3d/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ros3d/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ros3d/src/test.ts",
+            "tsConfig": "projects/ros3d/tsconfig.spec.json",
+            "karmaConfig": "projects/ros3d/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ros3d/tsconfig.lib.json",
+              "projects/ros3d/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-ros"
