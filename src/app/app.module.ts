@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { RosConnectionModule } from 'ros-connection';
+import { RosImageViewModule } from 'ros-image-view';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { RosConnectionModule } from 'ros-connection';
   ],
   imports: [
     BrowserModule,
-    RosConnectionModule
+    RosConnectionModule,
+    RosImageViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,6 +28,12 @@
       ],
       "ros3d/*": [
         "dist/ros3d/*"
+      ],
+      "ros-image-view": [
+        "dist/ros-image-view"
+      ],
+      "ros-image-view/*": [
+        "dist/ros-image-view/*"
       ]
     }
   }

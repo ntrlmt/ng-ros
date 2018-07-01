@@ -1,7 +1,7 @@
 <div class="section">
     <form>
         <mat-form-field>
-            <input matInput type="url" placeholder="URL" value="{{url}}">
+            <input name="rosUrl" matInput type="url" placeholder="URL" [(ngModel)]="url">
         </mat-form-field>
     </form>
     <button mat-raised-button [color]="color" (click)="connect()">Connect</button>
