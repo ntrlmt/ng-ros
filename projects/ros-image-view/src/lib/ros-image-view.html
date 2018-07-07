@@ -1,11 +1,14 @@
-<div>
-    <form>
-        <mat-form-field>
-            <input matInput type="url" placeholder="URL" [(ngModel)]="url">
+<div class="section">
+    <form class="form"> 
+        <mat-form-field class="full-width"> 
+        <!-- <mat-form-field >  -->
+            <input name="webVideoUrl" matInput type="url" placeholder="URL" [(ngModel)]="url">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput type="text" placeholder="Topic" [(ngModel)]="topicName"/>
+        <mat-form-field class="full-width">
+        <!-- <mat-form-field> -->
+                <input name="imageTopicName" matInput type="text" placeholder="Image Topic" [(ngModel)]="imageTopicName"/>
         </mat-form-field>
-    </form>    
-    <!-- <img src={{url}}/> -->
+    </form>
+    <!-- <img src="{{imageUrl}}"/> -->
+    <img src="{{videoUrl}}"/>
 </div>

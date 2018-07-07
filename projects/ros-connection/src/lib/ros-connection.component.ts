@@ -10,7 +10,7 @@ import { RosConnectionService } from './ros-connection.service';
   styleUrls: ['./ros-connection.css']
 })
 export class RosConnectionComponent implements OnInit {
-  url = 'localhost:9090';
+  url: string = 'localhost:9090';
   get connected(): boolean {
     return this.rosConnectionService.connected;
   }
