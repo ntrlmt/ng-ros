@@ -1,4 +1,4 @@
-<div class="section">
+<div #imageViewDiv class="section">
     <form class="form"> 
         <mat-form-field class="full-width"> 
         <!-- <mat-form-field >  -->
@@ -10,5 +10,8 @@
         </mat-form-field>
     </form>
     <!-- <img src="{{imageUrl}}"/> -->
-    <img src="{{videoUrl}}"/>
+    <!-- <div class="img-width"> -->
+    <div>
+        <img #image src="{{videoUrl}}"/>
+    </div>
 </div>

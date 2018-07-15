@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { FormControl } from '@angular/forms';
 
@@ -10,6 +10,7 @@ import { RosConnectionService } from './ros-connection.service';
   styleUrls: ['./ros-connection.css']
 })
 export class RosConnectionComponent implements OnInit {
+  @Input()
   url: string = 'localhost:9090';
   get connected(): boolean {
     return this.rosConnectionService.connected;

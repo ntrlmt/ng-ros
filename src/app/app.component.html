@@ -1,5 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="section">
-    <mat-ros-connection></mat-ros-connection>
-    <mat-ros-image-view></mat-ros-image-view>
+    <mat-ros-connection url="192.168.11.160:9090"></mat-ros-connection>
+    <mat-ros-image-view 
+    url="http://192.168.11.160:8080" 
+    imageTopicName="/raspicam_node/image" 
+    imgWidth={{windowWidth}} 
+    imgMaxWidth=1280 
+    imgRatio=0.75></mat-ros-image-view>
 </div>
