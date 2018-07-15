@@ -41,7 +41,15 @@ export class RosImageViewComponent implements OnInit, DoCheck, OnChanges, AfterV
     var imgWidth = this.imgWidth;
 
     if(imgWidth != undefined && imgWidth >= 0) {
-      videoUrl += "&width=" + this.imgWidth ;
+      console.log(`image width: ${imgWidth}`);    
+      console.log(`image max width: ${this.imgMaxWidth}`);    
+      if(+imgWidth > +this.imgMaxWidth) {
+        imgWidth = this.imgMaxWidth;
+      }
+      else {
+        console.log('small');        
+      }
+      videoUrl += "&width=" + imgWidth ;
       if(this.imgRatio != 0) {   
         var imgHeight = Math.floor(imgWidth * this.imgRatio);
         videoUrl += "&height=" + imgHeight;
@@ -49,8 +57,6 @@ export class RosImageViewComponent implements OnInit, DoCheck, OnChanges, AfterV
       console.log(`image width: ${imgWidth}`);    
       console.log(`image height: ${imgHeight}`);
     }
-    console.log(`image width: ${imgWidth}`);    
-    console.log(`image height: ${imgHeight}`);
     return videoUrl;
   }
   constructor() { }
